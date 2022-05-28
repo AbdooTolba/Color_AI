@@ -9461,35 +9461,35 @@ const inputB = document.getElementById('inputb')
 const textEL = document.getElementById('text')
 const colorEl = document.getElementById('color')
 // const guessEl = document.getElementById('guess')
-const whiteButton = document.getElementById('white-button')
-const blackButton = document.getElementById('black-button')
-const printButton = document.getElementById('print-button')
+// const whiteButton = document.getElementById('white-button')
+// const blackButton = document.getElementById('black-button')
+// const printButton = document.getElementById('print-button')
 let color
 
 
 submitEl.addEventListener('click',submitFun)
 
-whiteButton.addEventListener('click', () => {
-    chooseColor(1)
- })
+// whiteButton.addEventListener('click', () => {
+//     chooseColor(1)
+//  })
   
-  blackButton.addEventListener('click', () => {
-    chooseColor(0)
-})
-printButton.addEventListener('click',print)
+//   blackButton.addEventListener('click', () => {
+//     chooseColor(0)
+// })
+// printButton.addEventListener('click',print)
 
-function print(){
-    console.log(JSON.stringify(data)+'\n')
-}
+// function print(){
+//     console.log(JSON.stringify(data)+'\n')
+// }
 
-function chooseColor(value){
-    data.push({
-        input: color,
-        output: [value]
+// function chooseColor(value){
+//     data.push({
+//         input: color,
+//         output: [value]
 
-    })
-    setRandomColor()
-}
+//     })
+//     setRandomColor()
+// }
 
 const inputRC = document.getElementById('inputrc')
 const inputGC = document.getElementById('inputgc')
