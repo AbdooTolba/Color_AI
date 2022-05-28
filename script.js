@@ -9461,71 +9461,137 @@ const inputB = document.getElementById('inputb')
 const textEL = document.getElementById('text')
 const colorEl = document.getElementById('color')
 // const guessEl = document.getElementById('guess')
-// const whiteButton = document.getElementById('white-button')
-// const blackButton = document.getElementById('black-button')
-// const printButton = document.getElementById('print-button')
+const whiteButton = document.getElementById('white-button')
+const blackButton = document.getElementById('black-button')
+const printButton = document.getElementById('print-button')
 let color
 
 
 submitEl.addEventListener('click',submitFun)
 
-// whiteButton.addEventListener('click', () => {
-//     chooseColor(1)
-//  })
+whiteButton.addEventListener('click', () => {
+    chooseColor(1)
+ })
   
-//   blackButton.addEventListener('click', () => {
-//     chooseColor(0)
-// })
-// printButton.addEventListener('click',print)
+  blackButton.addEventListener('click', () => {
+    chooseColor(0)
+})
+printButton.addEventListener('click',print)
 
-// function print(){
-//     console.log(JSON.stringify(data)+'\n')
-// }
+function print(){
+    console.log(JSON.stringify(data)+'\n')
+}
 
-// function chooseColor(value){
-//     data.push({
-//         input: color,
-//         output: [value]
+function chooseColor(value){
+    data.push({
+        input: color,
+        output: [value]
 
-//     })
-//     setRandomColor()
-// }
+    })
+    setRandomColor()
+}
 
 const inputRC = document.getElementById('inputrc')
 const inputGC = document.getElementById('inputgc')
 const inputBC = document.getElementById('inputbc')
 
+
+// inputR.addEventListener('input',)
+
+
 inputRC.addEventListener('input',inputRCFun)
 inputGC.addEventListener('input',inputGCFun)
 inputBC.addEventListener('input',inputBCFun)
 
+
 function inputRCFun(){
-    inputR.value = inputRC.value/255
+
+    if(inputRC.value > 255)
+    {
+        inputR.value = 1
+    }
+
+    else if(inputRC.value < 0)
+    {
+        inputR.value = 0;
+    }
+
+    else
+    {
+        inputR.value = inputRC.value/255
+    }
 }
+
 function inputGCFun(){
-    inputG.value = inputGC.value/255
+    
+    if(inputGC.value > 255)
+    {
+        inputG.value = 1
+    }
+
+    else if(inputGC.value < 0)
+    {
+        inputG.value = 0;
+    }
+
+    else
+    {
+        inputG.value = inputGC.value/255
+    }
+    
 }
 function inputBCFun(){
-    inputB.value = inputBC.value/255
+    if(inputBC.value > 255)
+    {
+        inputB.value = 1
+    }
+
+    else if(inputBC.value < 0)
+    {
+        inputB.value = 0;
+    }
+
+    else
+    {
+        inputB.value = inputBC.value/255
+    }
 }
 
 
 function submitFun(){
 
-    // if(inputR.value = null)
-    // {
-    //     inputR.vlue = 0;
-    // }
 
-    // if(inputG.value = null)
-    // {
-    //     inputG.vlue = 0;
-    // }
 
-    // if(inputB.value = null)
-    // {
-    //     inputB.vlue = 0;
-    // }
+    if(inputR.value > 1)
+    {
+        inputR.value = 1;
+    }
+
+    else if(inputR.value < 0)
+    {
+        inputR.value = 0;
+    }
+
+    if(inputG.value > 1)
+    {
+        inputG.value = 1;
+    }
+
+    else if(inputG.value < 0)
+    {
+        inputG.value = 0;
+    }
+
+    if(inputB.value > 1)
+    {
+        inputB.value = 1;
+    }
+
+    else if(inputB.value < 0)
+    {
+        inputB.value = 0;
+    }
+
 
     color = 
     {
