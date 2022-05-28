@@ -1,5 +1,5 @@
 # Color AI
-### Is a website that suggests if black or white text looks better on a custom background based on AI with trained data With more UX functions :)
+### Is a website that suggests if black or white text looks better on a custom background based on AI with trained data and more UX functions :)
 
 # screenshots
 
