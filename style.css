@@ -1,0 +1,22 @@
+#color {
+    width: 200px;
+    height: 200px;
+    border: 5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .white {
+    color: white;
+  }
+  #inputg, #inputgc{
+    border:solid green 3px;
+  } 
+  #inputb, #inputbc{
+    border:solid blue 3px;
+  } 
+  #inputr, #inputrc{
+      border:solid red 3px;
+  }
